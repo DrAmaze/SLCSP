@@ -1,6 +1,5 @@
 require 'csv'
 def get_zips
-  CSV.foreach('./zips.csv') do |row|
-    puts row.inspect
-  end
+  zips = CSV.read('./zips.csv', :headers => true)
+  return zips
 end
